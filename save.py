@@ -30,11 +30,6 @@ def save_percentage(self, epoch, percentage, save_dir="logs/choice/"):
     filename = f"{self.log_filename}_{file}"
     save_path = os.path.join(save_dir, filename)
 
-    # # 如果是第一次写入，先写入表头
-    # if len(self.percentage) == 1:
-    #     with open(save_path, 'w') as f:
-    #         f.write("epoch,percentage\n")
-    # 追加写入当前loss
     with open(save_path, 'a') as f:
         f.write(f"{epoch},{percentage}\n")
 
@@ -86,7 +81,7 @@ def save_double_loss_realtime(self, index, bs, step_counts, lossData_history,los
 
         noise_losses_mean = sum(noise_losses) / len(noise_losses)
         clean_losses_mean = sum(clean_losses) / len(clean_losses)
-        all_losses_mean = sum(all_losses) / len(all_losses)
+        # all_losses_mean = sum(all_losses) / len(all_losses)
 
         # print("噪音数据损失,波动", noise_losses_mean)
         # print("纯净数据损失,波动", clean_losses_mean)

@@ -62,7 +62,7 @@ def load_dataset(dataset,data_pth, batch_size):
     # lable_poxy = r"E:\PapperProgram\dataset_noise\clip_lable_poxy\promot\data\nus\label_prompt_features.pkl"
 
 
-    # """nus—21"""
+    # """nus-21"""
     # train_loc =r"E:\PapperProgram\dataset_noise\clip_feature\nus_21\feature\train.pkl"
     # query_loc =r"E:\PapperProgram\dataset_noise\clip_feature\nus_21\feature\query.pkl"
     # retrieval_loc =r"E:\PapperProgram\dataset_noise\clip_feature\nus_21\feature\retrival.pkl"
@@ -72,12 +72,22 @@ def load_dataset(dataset,data_pth, batch_size):
 
 
     # """iaprtc"""
-    train_loc =r"E:\PapperProgram\dataset_noise\clip_feature\iaprtc\feature\train.pkl"
-    query_loc =r"E:\PapperProgram\dataset_noise\clip_feature\iaprtc\feature\query.pkl"
-    retrieval_loc =r"E:\PapperProgram\dataset_noise\clip_feature\iaprtc\feature\retrival.pkl"
-    # noise = r"E:\PapperProgram\dataset_noise\noise_make\iaprtc\noise\iaprtc-lall-noise_21_0.5.pkl"
-    noise = r"E:\PapperProgram\dataset_noise\noise_make\iaprtc\noise\iaprtc-lall-noise_21_0.2.pkl"
-    lable_poxy = r"E:\PapperProgram\dataset_noise\clip_lable_poxy\promot\data\iaprtc\label_prompt_features.pkl"
+    # train_loc =r"E:\PapperProgram\dataset_noise\clip_feature\iaprtc\feature\train.pkl"
+    # query_loc =r"E:\PapperProgram\dataset_noise\clip_feature\iaprtc\feature\query.pkl"
+    # retrieval_loc =r"E:\PapperProgram\dataset_noise\clip_feature\iaprtc\feature\retrival.pkl"
+    # noise = r"E:\PapperProgram\dataset_noise\noise_make\iaprtc\noise\iaprtc-lall-noise_21_0.8.pkl"
+    # lable_poxy = r"E:\PapperProgram\dataset_noise\clip_lable_poxy\promot\data\iaprtc\label_prompt_features.pkl"
+
+
+
+    # """COCO"""
+    # train_loc ="data/mscoco/train_coco.pkl"
+    # query_loc ="data/mscoco/query_coco.pkl"
+    # retrieval_loc ="data/mscoco/eval_coco.pkl"
+    # noise="data/mscoco/noise/coco-lall-noise_0.2.pkl"  #0.2 0.5 0.8
+    # lable_poxy = "data/mscoco/label_prompt_features.pkl"
+
+
 
     with open(noise, 'rb') as f_pkl:
         data = pickle.load(f_pkl)
