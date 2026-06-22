@@ -4,6 +4,7 @@ data/
 └── clip_feature/
     └── feature/
         └── main/  # Complete data production code & output features here
+        
 Run the processing scripts inside main/ to finish feature extraction and dataset construction.
 
 
